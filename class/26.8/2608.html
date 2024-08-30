@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<div>
+<body>
+  <style>
+    .taustakuva{
+      width: 440px;
+      height: 400px;
+      background-color: aquamarine;
+      background-image: url(kukka2.png);
+      background-repeat: no-repeat;
+      background: size 50%;
+      background-attachment:fixed;
+
+    }
+    .kukkakuva{
+      width: 200px;
+      height: 400px;
+      display: block;
+      /* display: none; -- resimni yok kilidu*/
+      margin: auto;
+      object-fit: cover;
+      background-color: aquamarine;
+    }
+    .overflow{
+      background-color: palegoldenrod;
+      width: 300%;
+      height: 300%;
+      overflow: scroll;
+    }
+    h3{
+      margin: 50px;
+    }
+
+  </style>
+
+  <h3>kuvan keksittäminen</h3>
+
+  <dir class="overflow">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus fuga. Inventore commodi ipsa odit totam deserunt assumenda sequi consequatur vitae non? Quaerat, eum pariatur nam nostrum aperiam beatae unde.
+    Eius sequi expedita amet corrupti aut in earum repellat quibusdam rem, nesciunt aliquid ullam, rerum sapiente! Accusamus officia libero odio obcaecati, assumenda accusantium quo quos ex, modi similique nihil perspiciatis.
+    Neque necessitatibus quaerat sed, distinctio ullam autem inventore voluptatum consequuntur animi enim! Doloremque illo illum dicta eaque harum vitae, quaerat saepe sed commodi laborum! Id nesciunt perferendis veniam quos ipsa?
+  </dir>
+
+
+  <img src="kukka.jpg" alt="kukka" class="kukkakuva" />
+  <h3>taustakuvan käyttö</h3>
+  <div class="taustakuva"></div>
+
+
+</body>
+
+</div>
+</html>
