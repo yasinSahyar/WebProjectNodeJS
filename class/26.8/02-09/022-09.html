@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    form{
+      width: 500px;
+      background-color: beige;
+    }
+    label{
+      display: block;
+      color: blueviolet;
+      margin: 10px auto;
+    }
+    ::placeholder{
+      color: rgb(195, 156, 156);
+    }
+
+    input{
+      padding: 10px;
+      border-left: 5px solid;
+
+
+    }
+
+    input:focus{
+      outline: none;
+
+    }
+
+    form input:optional{
+
+    }
+    form input:required{
+      border-left: 5px solid;
+      border-color: rgb(221, 202, 178);
+
+    }
+    form input:invalid{
+      border-left-color: rgb(197, 100, 100);
+
+    }
+    form input:valid{
+      border-left-color: rgb(153, 209, 98);
+
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <form action="" method="post">
+    <fieldset>
+      <legend>rekisteroidy</legend>
+
+      <label for="nimi">Anna kayttajatunnus</label>
+      <input type="text" name="nimi" id="" placeholder="yasin"
+      minlength="3"  maxlength="15" title="Anna käyttajatunnus min3,max15" required/>
+
+      <label for="salasana">Anna ssahkoposti</label>
+      <input type="email" name="sposti" id="" placeholder="@metropolia.fi" required/>
+
+      <label for="salasana">Anna salasana</label>
+      <input type="password" name="salasana" id="salasana" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+
+
+
+      <input type="submit" value="submit" />
+    </fieldset>
+  </form>
+
+  <p>tama tulokset</p>
+
+  <script>
+    // select the elements
+    const form = document.querySelector('form');
+    const nimi = document.querySelector('input[name=nimi]');
+    const salasana = document.querySelector('input[name=salasana]');
+    const p = document.querySelector('p');
+
+    // When the form is submitted...
+    form.addEventListener('submit', function(evt) {
+        // ... prevent the default action.
+        evt.preventDefault();
+        // Display the user input
+        p.innerText = `Your name is ${nimi.value} and your password is ${salasana.value}`;
+    });
+  </script>
+</body>
+</html>

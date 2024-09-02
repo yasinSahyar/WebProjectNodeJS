@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    form{
+      width: 500px;
+      background-color: beige;
+    }
+    label{
+      display: block;
+      color: blueviolet;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <form action="" method="post">
+    <fieldset>
+      <legend>rekisteroidy</legend>
+
+      <label for="color">valitse vari</label>
+      <input type="color" id="color" name="color"/>
+
+      <label for="nimi">Anna etunimi</label>
+      <input type="text" name="nimi" id="nimi"/>
+
+      <label for="salasana">Anna salasana</label>
+      <input type="password" name="salasana" id="salasana"/>
+
+      <label for="paivamaara">Anna paivamaara</label>
+      <input type="date" name="paivamaara" id="paivamaara"/>
+
+      <input type="submit" value="submit" />
+    </fieldset>
+  </form>
+
+  <p>tama tulokset</p>
+
+  <script>
+    // select the elements
+    const form = document.querySelector('form');
+    const nimi = document.querySelector('input[name=nimi]');
+    const salasana = document.querySelector('input[name=salasana]');
+    const p = document.querySelector('p');
+
+    // When the form is submitted...
+    form.addEventListener('submit', function(evt) {
+        // ... prevent the default action.
+        evt.preventDefault();
+        // Display the user input
+        p.innerText = `Your name is ${nimi.value} and your password is ${salasana.value}`;
+    });
+  </script>
+</body>
+</html>
